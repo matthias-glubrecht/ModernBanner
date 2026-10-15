@@ -1,0 +1,13 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "modern-banner-client-side-solution",
+    "id": "3f8f3b1c-c6d1-4f5e-8aad-94257f832c5b",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true
+  },
+  "paths": {
+    "zippedPackage": "solution/modern-banner.sppkg"
+  }
+}

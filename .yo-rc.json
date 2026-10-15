@@ -1,0 +1,8 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "version": "1.4.1",
+    "libraryName": "modern-banner",
+    "libraryId": "3f8f3b1c-c6d1-4f5e-8aad-94257f832c5b",
+    "environment": "spo"
+  }
+}

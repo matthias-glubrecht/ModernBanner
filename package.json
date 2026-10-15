@@ -1,0 +1,32 @@
+{
+  "name": "modern-banner",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "8.17.0",
+    "npm": "6.x"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "clean": "gulp clean",
+    "test": "gulp build && jest --runInBand",
+    "test:browser": "gulp build && node tests\\browser-smoke.js",
+    "package": "gulp bundle --ship && gulp package-solution --ship",
+    "start": "gulp serve"
+  },
+  "dependencies": {
+    "@microsoft/sp-core-library": "1.4.1",
+    "@microsoft/sp-application-base": "1.4.1"
+  },
+  "devDependencies": {
+    "@microsoft/sp-build-web": "1.4.1",
+    "@microsoft/sp-module-interfaces": "1.4.1",
+    "@microsoft/sp-webpart-workbench": "1.4.1",
+    "@types/webpack-env": "1.13.1",
+    "gulp": "3.9.1",
+    "ajv": "5.2.5",
+    "jest": "23.6.0",
+    "jest-environment-jsdom": "23.4.0",
+    "ws": "7.5.10"
+  }
+}

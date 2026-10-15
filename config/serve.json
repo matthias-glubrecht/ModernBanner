@@ -1,0 +1,37 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://sharepoint.example/sites/Otto/SitePages/Interviewmaske2.aspx",
+      "customActions": {
+        "7dcf12d6-9e20-4554-aca6-2ce594f84bee": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "bannerText": "Announcement",
+            "backgroundColor": "",
+            "textColor": "",
+            "fontSize": 14,
+            "includedPageNames": []
+          }
+        }
+      }
+    },
+    "laufschrift": {
+      "pageUrl": "https://sharepoint.example/sites/Otto/SitePages/Interviewmaske2.aspx",
+      "customActions": {
+        "7dcf12d6-9e20-4554-aca6-2ce594f84bee": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "bannerText": "Scheduled maintenance on Friday",
+            "backgroundColor": "#ffd700",
+            "textColor": "#000000",
+            "fontSize": 18,
+            "includedPageNames": ["Interviewmaske2"]
+          }
+        }
+      }
+    }
+  }
+}
