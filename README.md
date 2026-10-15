@@ -38,6 +38,9 @@ it with the SharePoint client-side asset-library marker in the packaged componen
 # After npm run package:
 powershell -NoProfile -File .\tests\verify-package.ps1
 
+# Client registration helper, using isolated CSOM doubles (no farm required):
+powershell -NoProfile -File .\tests\verify-client-custom-action.ps1
+
 # Real browser layout, 80px/s, pause/play, container resize and reduced motion:
 fnm exec --using 8.17.0 cmd /d /c "npm run test:browser"
 
@@ -117,6 +120,13 @@ This filter controls rendering, **not access/security**; the extension can still
 Web/Site registration scope and page filtering are independent.
 
 ## Deploy and explicitly activate
+
+For release downloads and step-by-step activation/deactivation using
+**SharePointPnPPowerShell2019** or **pure CSOM** from a client machine, see
+[the deployment guide](DEPLOYMENT.md). Both options use
+[scripts/Set-BannerClientCustomAction.ps1](scripts/Set-BannerClientCustomAction.ps1),
+with explicit Web/Site scope, idempotent updates, and `-WhatIf` support.
+The server-side alternative below remains available.
 
 1. Upload the `.sppkg` to the farm web application's **App Catalog**, and deploy it.
 2. Select **Make this solution available to all sites in the organization** in the deployment dialog.
